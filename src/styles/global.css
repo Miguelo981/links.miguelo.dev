@@ -1,0 +1,28 @@
+.main-card {
+	@apply rounded-2xl bg-slate-800 text-white;
+}
+
+.username {
+	@apply font-bold text-2xl;
+}
+
+.user-description {
+	@apply text-sm;
+}
+
+.link-btn {
+	@apply flex items-center justify-center space-x-3 px-10 py-2 w-full text-white text-center rounded-xl bg-blue-600 hover:bg-blue-700 transition ease-in-out duration-150;
+}
+
+.banner-header-bg {
+	background-image: linear-gradient(to right, rgba(245, 246, 252, 0.52), rgba(117, 19, 93, 0.73)), url("https://media.istockphoto.com/photos/programming-code-abstract-technology-background-of-software-developer-picture-id1224500457?b=1&k=20&m=1224500457&s=612x612&w=0&h=oTvUxf6T0pKuQA5XRuePuTBxQTmB3BXWzpIl5u2iy44=");
+	@apply bg-no-repeat bg-cover w-full h-36;
+}
+
+.sn-icon {
+	@apply fill-current text-white cursor-pointer;
+}
+
+.zoom-in {
+	@apply transition ease-in hover:scale-125 duration-200;
+}

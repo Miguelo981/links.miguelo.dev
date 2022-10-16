@@ -1,0 +1,19 @@
+---
+import { socialNetworks } from "../mocks/social-networks.mock";
+
+---
+
+<div class='flex justify-center space-x-6 mt-5'>
+    {
+      socialNetworks.map((social) => (
+        <a href={social.href} target="_blank" class="zoom-in" >
+          <img 
+            src={`/assets/icons/${social.icon}.svg`}
+            class='w-6 h-auto sn-icon'
+            alt={social.icon}
+            loading="lazy"
+            />
+        </a>
+      ))
+    }
+</div>

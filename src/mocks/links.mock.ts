@@ -20,7 +20,15 @@ export const groups: LinkGroup[] = [
             {
                 title: "Web3 Dashboard",
                 link: "https://web3.miguelo.dev",
-            }
+            },
+            {
+                title: "Web3 JWT Token",
+                link: "https://github.com/Miguelo981/web3-token",
+            },
+            {
+                title: "Free IMG File Converter",
+                link: "https://converter.miguelo.dev/",
+            },
         ]
-    }
+    },
 ]

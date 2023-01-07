@@ -1,0 +1,21 @@
+---
+
+
+---
+
+<button id="contact-button" class='btn-animated link-btn text-2xl font-bold'>
+    Contacto
+</button>
+
+<script>
+    // Find all buttons with the `alert` class on the page.
+    const button = document.querySelector('button#contact-button');
+
+    if (button) {
+        console.log(button)
+
+        button.addEventListener('click', () => {
+            window.location.href = "mailto:miguelangel.rodriguez.hernando@gmail.com?subject=Contacto&body=";
+        });
+    }
+</script>

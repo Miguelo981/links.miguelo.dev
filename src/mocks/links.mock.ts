@@ -1,4 +1,4 @@
-import type { LinkGroup } from "../types";
+import type { LinkGroup } from "../types/types";
 
 export const groups: LinkGroup[] = [
     {
@@ -6,7 +6,7 @@ export const groups: LinkGroup[] = [
         links: [
             {
                 title: "Miguelo DEV",
-                link: "https://miguelo.dev/es",
+                link: "https://portfolio.miguelo.dev",
             },
         ]
     },
@@ -14,8 +14,12 @@ export const groups: LinkGroup[] = [
         title: "Proyectos",
         links: [
             {
-                title: "Info Takushi JP 🚕",
-                link: "http://takushi.jp.net/",
+                title: "Free IMG File Converter",
+                link: "https://converter.miguelo.dev/",
+            },
+            {
+                title: "Token Price Alert Bot",
+                link: "https://github.com/Miguelo981/token-price-alert-bot",
             },
             {
                 title: "Web3 Dashboard",
@@ -25,10 +29,7 @@ export const groups: LinkGroup[] = [
                 title: "Web3 JWT Token",
                 link: "https://github.com/Miguelo981/web3-token",
             },
-            {
-                title: "Free IMG File Converter",
-                link: "https://converter.miguelo.dev/",
-            },
+            
         ]
     },
 ]

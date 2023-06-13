@@ -4,6 +4,7 @@ import MainHead from '../components/MainHead.astro';
 import { groups } from '../mocks/links.mock';
 import SocialNetworksList from "../components/SocialNetworksList.astro";
 import ContactBtn from "../components/ContactBtn.astro";
+import type { LinkTree } from "../types/types";
 
 ---
 
@@ -14,14 +15,14 @@ import ContactBtn from "../components/ContactBtn.astro";
 			description=""
 		/>
 	</head>
-	<body class="flex justify-center items-center min-h-screen bg-gradient-to-bl from-slate-900 to-indigo-900 p-5 scrollbar">		
+	<body class="flex justify-center items-center min-h-screen bg-gradient-to-bl from-gray-100 to-gray-50 dark:from-slate-900 dark:to-indigo-900 p-5 scrollbar">		
 		<main class="space-y-[10%] h-full">
 			<article class="main-card flex flex-col w-full">
 				<div class="banner-header-bg rounded-t-2xl" />
-				<div class="relative divide-y-[0.25px] divide-slate-500">
+				<div class="relative divide-y-[0.25px] divide-gray-300 dark:divide-slate-500">
 					<header class="text-center pb-4 p-6">
 						<div class="absolute -top-14 left-0 flex justify-center w-full">
-							<img class="rounded-full h-28 w-auto shadow-lg border-4 border-blue-600" src="/assets/images/profile-pic.jpg" alt="profile pic">
+							<img class="rounded-full h-28 w-auto shadow-lg border-4 border-indigo-500" src="/assets/images/profile-pic.jpg" alt="profile pic">
 						</div>
 						<h1 class="username mt-10 mb-2 text-animated">Miguelo</h1>
 						<p class="user-description">Nómada digital Canario con demasiados hobbies y proyectos abiertos.</p>
@@ -31,16 +32,14 @@ import ContactBtn from "../components/ContactBtn.astro";
 					<section class="pt-1 pb-6 px-6 rounded-b-2xl">
 						{
 							groups.map(group => (
-								<h2 class="text-center my-4 text-lg font-bold">{group.title}</h2>
+								<h2 class="text-center my-4 text-lg font-semibold text-black dark:text-white">{group.title}</h2>
 								<div class="flex flex-col space-y-3">
 									{
-										group.links.map(link => 
+										group.links.map((link: LinkTree) => 
 											(
-												<a href={link.link}>
-													<div class="link-btn">
-														<h2>{link.title}</h2>
-														<img class={link.icon ? 'block h-5 w-auto' : 'hidden'} src={link.icon} alt="">
-													</div>
+												<a href={link.link} class="link-btn">
+													<h3>{link.title}</h>
+													<img class={link.icon ? 'block h-5 w-auto' : 'hidden'} src={link.icon} alt="">
 												</a>
 											))
 									}
@@ -48,16 +47,14 @@ import ContactBtn from "../components/ContactBtn.astro";
 							))
 						}
 						<div class="mt-12">
-							<ContactBtn client:visible />
+							<ContactBtn />
 						</div>
 					</section>
 				</div>
+				<footer class="py-5 border-t border-gray-300 dark:border-slate-500">
+					<h4 class="text-center text-xl font-light text-black dark:text-white">Miguelo Links © { new Date().getFullYear() }</h4>
+				</footer>
 			</article>
-			<footer class="relative h-full">
-				<div class="bottom-0 left-0 w-full">
-					<h4 class="text-center text-xl font-light text-white">Miguelo Links © { new Date().getFullYear() }</h4>
-				</div>
-			</footer>
 		</main>
 	</body>
 </html>

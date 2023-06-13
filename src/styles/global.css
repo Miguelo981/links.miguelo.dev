@@ -59,7 +59,7 @@
 
 @layer components {
 	.main-card {
-		@apply rounded-2xl bg-slate-800 text-white shadow-md;
+		@apply rounded-2xl bg-white dark:bg-slate-800 text-white shadow-md;
 	}
 
 	.username {
@@ -67,11 +67,15 @@
 	}
 
 	.user-description {
-		@apply text-base;
+		@apply text-base text-black dark:text-white;
 	}
 
 	.link-btn {
-		@apply flex items-center justify-center space-x-3 px-10 py-2 w-full text-white text-center rounded-xl bg-blue-600 hover:bg-blue-700 transition ease-in-out duration-150;
+		@apply text-center py-2 bg-indigo-500 hover:bg-transparent rounded-md text-lg text-white hover:text-indigo-500 border-transparent hover:border-indigo-500 border-2;
+	}
+
+	.contact-btn {
+		@apply py-2 w-full rounded-md flex justify-center hover:opacity-80 duration-200 ease-in-out transition;
 	}
 
 	.banner-header-bg {
@@ -80,7 +84,7 @@
 	}
 
 	.sn-icon {
-		@apply cursor-pointer;
+		@apply cursor-pointer fill-indigo-500 dark:fill-white;
 	}
 
 	.zoom-in {

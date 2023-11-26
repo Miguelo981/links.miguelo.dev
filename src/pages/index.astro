@@ -19,7 +19,7 @@ import type { LinkTree } from "../types/types";
 		<main class="space-y-[10%] h-full">
 			<article class="main-card flex flex-col w-full">
 				<div class="banner-header-bg rounded-t-2xl" />
-				<div class="relative divide-y-[0.25px] divide-gray-300 dark:divide-slate-500">
+				<div class="relative">
 					<header class="text-center pb-4 p-6">
 						<div class="absolute -top-14 left-0 flex justify-center w-full">
 							<img class="rounded-full h-28 w-auto shadow-lg border-4 border-indigo-500" src="/assets/images/profile-pic.jpg" alt="profile pic">
@@ -29,28 +29,32 @@ import type { LinkTree } from "../types/types";
 						<SocialNetworksList />
 					</header>
 					<!-- Link tree list -->
-					<section class="pt-1 pb-6 px-6 rounded-b-2xl">
+					<section class="pt-1 pb-6 px-6 rounded-b-2xl border-t border-gray-300 dark:border-slate-500">
 						{
 							groups.map(group => (
 								<h2 class="text-center my-4 text-lg font-semibold text-black dark:text-white">{group.title}</h2>
-								<div class="flex flex-col space-y-3">
+								<ul class="flex flex-col space-y-3">
 									{
 										group.links.map((link: LinkTree) => 
 											(
-												<a href={link.link} class="link-btn">
-													<h3>{link.title}</h>
-													<img class={link.icon ? 'block h-5 w-auto' : 'hidden'} src={link.icon} alt="">
-												</a>
+												<li class="link-btn">
+													<a href={link.link}>
+														<h3>{link.title}</h>
+														<img class={link.icon ? 'block h-5 w-auto' : 'hidden'} src={link.icon} alt="">
+													</a>
+												</li>
 											))
 									}
-								</div>
+								</ul>
 							))
 						}
-						<div class="mt-12">
-							<ContactBtn />
-						</div>
 					</section>
+
+					<footer class="px-6 pb-4">
+						<ContactBtn />
+					</footer>
 				</div>
+				
 				<footer class="py-5 border-t border-gray-300 dark:border-slate-500">
 					<h4 class="text-center text-xl font-light text-black dark:text-white">Miguelo Links © { new Date().getFullYear() }</h4>
 				</footer>

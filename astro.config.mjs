@@ -1,16 +1,17 @@
 import { defineConfig } from 'astro/config';
-
-import node from "@astrojs/node";
-
 import tailwindcss from "@tailwindcss/vite";
 
 export default defineConfig({
+  build: {
+		inlineStylesheets: "always",
+	},
+	compressHTML: true,
+	prefetch: true,
+	devToolbar: {
+		enabled: false,
+	},
   integrations: [],
-
-  adapter: node({
-    mode: "standalone"
-  }),
-
+  output: 'static',
   vite: {
     plugins: [tailwindcss()]
   }

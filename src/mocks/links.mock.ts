@@ -8,6 +8,10 @@ export const groups: LinkGroup[] = [
                 title: "Miguelo DEV",
                 link: "https://portfolio.miguelo.dev",
             },
+            {
+                title: "Image Converter",
+                link: "https://converter.miguelo.dev",
+            },
         ]
     },
     {
@@ -17,10 +21,10 @@ export const groups: LinkGroup[] = [
                 title: "How much tweets are worth? Extension",
                 link: "https://chromewebstore.google.com/detail/how-much-tweets-are-worth/hjcipfpgciiaogoimmlglfgoegjjkkip?hl=es&ref=producthunt&pli=1"
             },
-            /* {
-                title: "Free IMG File Converter",
-                link: "https://converter.miguelo.dev/",
-            }, */
+            {
+                title: "Tinder API",
+                link: "https://github.com/Miguelo981/tinder-api",
+            },
             {
                 title: "Token Price Alert Bot",
                 link: "https://github.com/Miguelo981/token-price-alert-bot",
